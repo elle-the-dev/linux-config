@@ -50,7 +50,7 @@
 [pager]
     log = nvim -R -c 'set filetype=git nowrap' -
 [user]
-	email = derek@dhamilton.codes
-	name = Derek Hamilton
+	email = elle@snap21.com
+	name = Elle Hamilton
 [pull]
 	rebase = false

@@ -15,7 +15,7 @@ parcellite &
 nm-applet &
 flameshot &
 unclutter -idle 5 &
-pulseaudio -D &
+#pulseaudio -D &
 
 ./.xinitrc.local &
 

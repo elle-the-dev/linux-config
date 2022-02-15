@@ -105,6 +105,9 @@ compinit
 # prompt adam2
 #prompt pure
 
+# CTRL+backspace to delete word
+# bindkey '^H' backward-kill-word
+
 # setopt correctall
 setopt hist_ignore_space
 setopt extendedglob
