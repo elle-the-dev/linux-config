@@ -81,3 +81,7 @@ fi
 if [ ! -f ~/bin/lastpass-rofi-copy ]; then
     ln -s "$DIR/lastpass-rofi-copy" ~/bin/lastpass-rofi-copy
 fi
+
+if [ ! -f ~/.oh-my-zsh/themes/amuse-customized.zsh-theme]; then
+    ln -s "$DIR/amuse-customized.zsh-theme" ~/.oh-my-zsh/themes/amuse-customized.zsh-theme
+fi

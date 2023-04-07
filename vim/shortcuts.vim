@@ -1,5 +1,6 @@
 " Remap CTRL+C to perform an escape instead a literal CTRL+C
 imap <C-c> <C-[>
+map <C-c> <C-[>
 
 " buffer shortcuts
 ":nnoremap <C-n> :bnext<CR>
@@ -28,10 +29,10 @@ nmap <Leader>sql :%!sqlformat --reindent --keywords upper -<CR>
 nmap <Leader>json :%!python -m json.tool<CR>
 
 " Formal XML
-nmap <Leader>xml :% ! xmllint --format -<CR>
+nmap <Leader>xml :% ! xmllint --format -<CR>:set filetype=xml<CR>
 
 " Run phpunit
-nmap <Leader>pu :!vendor/bin/phpunit %<CR>
+nmap <Leader>pu :!export PHPUNIT_NODB=1 && vendor/bin/phpunit % && export PHPUNIT_NODB=0<CR>
 
 " Toggle fix on save
 function! FixOnSaveToggle()
@@ -55,6 +56,10 @@ nmap <Leader>file :echo expand("%:p")<CR>
 " copy current file path
 nmap <Leader>yfile :let @+ = expand("%:p")<CR>:echo "Copied " . expand("%:p")<CR>
 
+" open prettier output log - will show CSS errors
+nmap <Leader>pcss :CocCommand prettier.open-output<CR>
+
 " Map Ctrl-Backspace to delete the previous word in insert mode.
-" noremap! <C-BS> <C-w>
-" noremap! <C-h> <C-w>
+"inoremap <C-BS> <C-w>
+"noremap! <C-BS> <C-w>
+"noremap! <C-h> <C-w>

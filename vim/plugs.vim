@@ -1,7 +1,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 " async linting
-Plug 'https://github.com/w0rp/ale'
+Plug 'https://github.com/dense-analysis/ale'
 let g:ale_php_php_cs_fixer_executable='~/bin/php-cs-fixer'
 let g:ale_fixers = {'php': ['php_cs_fixer']}
 let g:ale_php_phpcs_standard = '~/psr2-custom.xml'
@@ -13,6 +13,9 @@ let g:ale_php_phpstan_level = 7
 "let psalm_langserver_options = "--threads=8 --diff --diff-methods"
 let g:ale_fix_on_save = 1
 let g:airline#extensions#ale#enabled = 0
+let g:ale_linters = {
+\ 'php': ['intelephense'],
+\ }
 
 " let g:ale_lint_on_save = 1
 " let g:ale_lint_on_text_changed = 0
@@ -117,7 +120,7 @@ Plug 'https://github.com/tobyS/vmustache'
 Plug 'https://github.com/SirVer/ultisnips'
 Plug 'https://github.com/honza/vim-snippets'
 Plug 'https://github.com/algotech/ultisnips-php'
-let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsExpandTrigger="<Leader>sn"
 
 let g:pdv_template_dir = $HOME ."/.local/share/nvim/plugged/pdv/templates"
 nnoremap <C-h> :call pdv#DocumentWithSnip()<CR>
@@ -359,8 +362,15 @@ Plug 'https://github.com/justinmk/vim-sneak'
 " ex. change 'foo' to "foo" => cs'"
 Plug 'https://github.com/tpope/vim-surround'
 
+" transpose a table to swap rows and columns
+Plug 'https://github.com/salsifis/vim-transpose'
+
 " PHP formatting
 " Plug 'https://github.com/2072/vim-syntax-for-PHP'
+
+" Debugger
+" Plug 'https://github.com/puremourning/vimspector'
+" let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
 
 " vim-powered built-in wiki
 " <Leader>ww to open wiki index
