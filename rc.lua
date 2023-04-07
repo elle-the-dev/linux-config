@@ -353,7 +353,8 @@ globalkeys = gears.table.join(
               {description = "show the menubar", group = "launcher"}),
 
     -- Custom system keybindings
-    awful.key({ }, "Print", function () awful.util.spawn('flameshot gui -p '..os.getenv("HOME").."/Pictures/Screenshots/") end),
+    -- awful.key({ }, "Print", function () awful.util.spawn('flameshot gui -p '..os.getenv("HOME").."/Pictures/Screenshots/") end),
+    awful.key({ }, "Print", function () awful.util.spawn('flameshot gui') end),
     awful.key({ "Control", "Shift" }, "F12", function () awful.spawn.with_shell("grabc | xclip -i") end),
 
     -- fuzzy search applications to open

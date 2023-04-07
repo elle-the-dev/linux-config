@@ -6,10 +6,10 @@ if [ ! -d ~/.config/linux-config ]; then
     mkdir ~/.config/linux-config -p
 fi
 
-if [ -f ~/config/linux-config/vim ]; then
-    mv ~/config/linux-config/vim ~/config/linux-config/vim.bak
+if [ -f ~/.config/linux-config/vim ]; then
+    mv ~/.config/linux-config/vim ~/.config/linux-config/vim.bak
 fi
-ln -s "$DIR/config/linux-config/vim" ~/config/linux-config/vim
+ln -s "$DIR/.config/linux-config/vim" ~/.config/linux-config/vim
 
 if [ -f ~/.config/linux-config/psr2-custom.xml ]; then
     mv ~/.config/linux-config/psr2-custom.xml ~/.config/linux-config/psr2-custom.xml.bak
@@ -50,14 +50,14 @@ if [ -f ~/.config/nvim/init.vim ]; then
     mv ~/.config/nvim/init.vim ~/.config/nvim/init.vim.bak
 fi
 if [ -d ~/.config/nvim ]; then
-    ln -s "$DIR/vim/init.vim" "~/.config/nvim/init.vim"
+    ln -s "$DIR/vim/init.vim" ~/.config/nvim/init.vim
 fi
 
 if [ -f ~/.config/nvim/coc-settings.json ]; then
     mv ~/.config/nvim/coc-settings.json ~/.config/nvim/coc-setitngs.json.bak
 fi
 if [ -d ~/.config/nvim ]; then
-    ln -s "$DIR/coc-settings.json" "~/.config/nvim/coc-settings.json"
+    ln -s "$DIR/coc-settings.json" ~/.config/nvim/coc-settings.json
 fi
 
 if [ -f ~/.config/alacritty/alacritty.yml ]; then
@@ -71,7 +71,7 @@ if [ -f ~/.config/awesome/rc.lua ]; then
     mv ~/.config/awesome/rc.lua ~/.config/awesome/rc.lua.bak
 fi
 if [ -d ~/.config/awesome ]; then
-    ln -s "$DIR/rc.lua" "~/.config/awesome/rc.lua"
+    ln -s "$DIR/rc.lua" ~/.config/awesome/rc.lua
 fi
 
 if [ ! -f ~/bin/pasteimage ]; then

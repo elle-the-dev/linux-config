@@ -56,5 +56,5 @@ nmap <Leader>file :echo expand("%:p")<CR>
 nmap <Leader>yfile :let @+ = expand("%:p")<CR>:echo "Copied " . expand("%:p")<CR>
 
 " Map Ctrl-Backspace to delete the previous word in insert mode.
-noremap! <C-BS> <C-w>
-noremap! <C-h> <C-w>
+" noremap! <C-BS> <C-w>
+" noremap! <C-h> <C-w>

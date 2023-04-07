@@ -5,6 +5,7 @@
 # xset +fp ~/.local/share/fonts/tamzen-font/bdf
 # xset fp rehash
 
+echo 0 | sudo tee /sys/module/hid_apple/parameters/fnmode
 xrandr --output DP-1-1 --primary
 xmodmap ~/.xmodmap
 xset m 18/15 0
@@ -15,7 +16,7 @@ parcellite &
 nm-applet &
 flameshot &
 unclutter -idle 5 &
-pulseaudio -D &
+# pulseaudio -D &
 
 ./.xinitrc.local &
 
